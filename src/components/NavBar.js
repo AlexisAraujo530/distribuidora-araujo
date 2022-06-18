@@ -21,7 +21,7 @@ const NavBar = () => {
         <a class="nav-link" href="#">Arma tu pedido</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="#">Contactanos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Nuestra Ubicacion</a>
