@@ -1,0 +1,11 @@
+.fondo {
+    margin: 0;
+    background-image: url(../imagenes/fondoo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  
+  
