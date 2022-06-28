@@ -1,20 +1,18 @@
-import React from 'react';
-import NavBar from './components/NavBar';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Card  from './components/ItemCount'
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import Navbar from './components//Navbar';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
+  const greeting= "Distribuidora Malena"
   return (
-    <div className='App' >
-      <div className="row">
-        <div className='col-4'></div>
-        <div className='col-4'>
-          <Card stock={45} name='Fideo' />
-        </div>
-        <div className='col-4'></div>
-      </div>    
-    </div>
+    <>
+     <Navbar/>
+     <ItemListContainer greeting={greeting}/>
+     
+    </>
   );
 }
 

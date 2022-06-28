@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import ItemList from '../components/ItemList'
+import { getData } from '../mocks/fakeApi'
 
+const ItemListContainer = ({greeting}) => {
+  const [productList, setProductList]=useState([])
+  const [loading, setLoading]=useState(true)
 
-function ItemList  (props) {
-    return (
-        <>
-    <h1> Utilizando Prosps {props.Item1}</h1>
-    <h2>Utilizando productos {props.Item2} </h2>
-    <h3>Listado de Productos{props.Item3} </h3>
-    
-    </>
-     );
+   
+    const getProducts = async () => {
+      try{
+        const respuesta = await getData
+        setProductList(respuesta)
+      }catch(error){
+        console.log(error)
+      }finally{
+        setLoading(false)
+      }
+    }
+
+    useEffect(()=>{
+      getProducts()
+    },[])
+  
+  return (
+    <div>
+      <h1>{greeting}</h1>
+      {loading ? <h1>Cargando Productos...</h1> : <ItemList productList={productList}/> },
+      
+      
+    </div>
+  )
 }
 
-export default ItemList
+export default ItemListContainer
