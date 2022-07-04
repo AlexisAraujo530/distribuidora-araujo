@@ -1,11 +1,43 @@
-.fondo {
-    margin: 0;
-    background-image: url(../imagenes/fondoo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-    background-attachment: fixed;
-  }
+
+ .detail {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   
- 
+ }
+ .container {
+  width: 98%;
+  margin: auto;
+
+  
+ }
+/* .descri{
+  flex-grow: 2;
+  position: sticky;
+ }
+*/
+.content{
+  width: 100%;
+}
+
+
+.img_product {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .img_product {
+    width: 50%;
+  }
+  .content {
+    width: 50%;
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+  

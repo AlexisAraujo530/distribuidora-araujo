@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from '../components/ItemList'
-import { getData } from '../mocks/fakeApi'
+//import { getData } from '../mocks/fakeApi'
 
 const ItemListContainer = ({greeting}) => {
   const [productList, setProductList]=useState([])
@@ -25,7 +25,7 @@ const ItemListContainer = ({greeting}) => {
   return (
     <div>
       <h1>{greeting}</h1>
-      {loading ? <h1>Cargando Productos...</h1> : <ItemList productList={productList}/> },
+      {loading ? <h1>Cargando Productos...</h1> : <ItemList productList={productList}/> }
       
       
     </div>

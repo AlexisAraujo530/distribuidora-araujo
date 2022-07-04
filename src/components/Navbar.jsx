@@ -3,7 +3,7 @@ import CartWidget from '../components/CartWidget'
 
 
 const Navbar = () => {
-  // console.log('soy el nav y me monte')
+  
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
     <div className="container-fluid">

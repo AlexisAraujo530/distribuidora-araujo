@@ -8,7 +8,6 @@ const products = [
     {id:'01', name:'Harina', description:"Harina Cañuelas x 500gr", img:'/Imagen/harina.jpg' , stock : 31},
     {id:'01', name:'Galletita', description:"Surtido Bagley x500gr", img:'/Imagen/surtido.jpg' , stock :15},
 
-
 ]
 
 export const getData = new Promise ((resolve, reject) =>{
@@ -22,3 +21,5 @@ export const getData = new Promise ((resolve, reject) =>{
       }
     },3000)
   })
+
+  export default products;
