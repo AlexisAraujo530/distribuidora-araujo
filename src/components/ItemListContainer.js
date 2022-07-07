@@ -1,35 +1,52 @@
 import React, { useEffect, useState } from 'react'
-import ItemList from '../components/ItemList'
-//import { getData } from '../mocks/fakeApi'
+import ItemList from './ItemList'
+import { getProds } from '../mocks/fakeApi'
+import { useParams } from 'react-router-dom';
 
-const ItemListContainer = ({greeting}) => {
-  const [productList, setProductList]=useState([])
-  const [loading, setLoading]=useState(true)
+const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  const { categoryId } = useParams();
    
-    const getProducts = async () => {
-      try{
-        const respuesta = await getData
-        setProductList(respuesta)
-      }catch(error){
-        console.log(error)
-      }finally{
-        setLoading(false)
-      }
-    }
 
-    useEffect(()=>{
-      getProducts()
-    },[])
-  
-  return (
-    <div>
-      <h1>{greeting}</h1>
-      {loading ? <h1>Cargando Productos...</h1> : <ItemList productList={productList}/> }
-      
-      
-    </div>
-  )
-}
+    useEffect(() => {
+            setLoading(true);
+            getProds(categoryId)
+            .then((res) => {
+                setProducts(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            }); 
+          }, [categoryId]);
 
-export default ItemListContainer
+          return (
+              <div>
+                  {loading ? (
+                      <h2>Cargando...</h2>
+                  ) : (
+                      <>
+                          <ItemList items={products} />
+                      </>
+                  )}
+              </div>
+          );
+      };
+      
+      export default ItemListContainer;
+
+ 
+
+
+
+
+
+
+
+
+
+

@@ -1,39 +1,132 @@
-/*.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: rgb(65, 190, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav h1 {
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  color: white;
+  margin: 0px 10px;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+}
+
+.shop p {
+  color: white;
+  margin-left: 12px;
+}
+
+.count {
+  background-color: rgba(25, 216, 41, 0.767);
+  margin: 30px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.buttons button {
+  font-size: 25px;
+  border: none;
+  background-color:white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  
+}
+
+.buttons p {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-cart button {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color:white;
+  color: black;
+  padding: 10px 0px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.categorias{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: rgb(31, 230, 64);
+  color: black;
+}
+
+.verdetalle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: rgb(50, 177, 216);
+  color: black;
+}
+.categoria{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: white;
+  color: black;
+}
+/*nav ul .categorias{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 50px;
 }
 */

@@ -1,28 +1,22 @@
-import React from "react";
-import './components.css';
+import React from 'react';
+import ItemCount from './ItemCount';
 
-
-
-export const ItemDetail = ({ data } ) => {
+const ItemDetail = ({ product }) => {
   return (
-    <div className="container">
       <div className="detail">
-        <img className="img_product" key={data.id} src={data.img} alt=""  />
-        <div className="content">
-        <h1>{data.name}</h1>
-        <br />
-        <h2>{data.description}</h2>
-        <br />
-        <h2>{data.precio}</h2>
-        <br />
-        <br />
-        <button> Agregar al Carrito</button>
-        </div>
+          <img src={product.image} alt={product.title} width="400" />
+          <div>
+              <h1>{product.title}</h1>
+              <h2>{product.description}</h2>
+              <h3>$ {product.price}</h3>
+              <h4>Stock: {product.stock}</h4>
+              <ItemCount stock={product.stock} initial={1} />
+          </div>
       </div>
-    </div>
   );
-}
+};
+
 export default ItemDetail;
 
 
-//style={{width: 600, height: 600,}}
+

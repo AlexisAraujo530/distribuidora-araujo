@@ -1,28 +1,30 @@
+import React, { useState } from 'react';
 
-import React, { useState } from 'react'
+const ItemCount = ({ initial, stock }) => {
+  const [count, setCount] = useState(initial);
 
+  const add = () => {
+      stock !== count && setCount(count + 1);
+  };
 
-
-   const ItemCount = ({stock}) => {
-        const [amount, setAmount] = useState(0)
-        const count = (value) => {
-            const result = amount + value
-           if(result<=stock){
-            setAmount(amount+value)
-        }
-    };
-
-
-
+  const substract = () => {
+      initial !== count && setCount(count - 1);
+  };
   return (
-    <div className='d-flex flex-row align-items-center display-3 justify-content-between'>
-    <button className='btn btn-danger p5 fw-bold display-3' onClick={()=>count(-1)}>-</button>
-    <span>{amount} </span>
-    <button className='btn btn-success p5 fw-bold display-3' onClick={()=>count(+1)}>+</button>
-</div>
-  )
-}
+          <div className="count">
+          <div className="buttons">
+              <button className='btn-success' onClick={add}>+</button>
+              <p>{count}</p>
+              <button className='btn-danger' onClick={substract}>-</button>
+            </div>
+            <div className="add-cart">
+              <button className='btn-success'>Add to Cart!</button>
+          </div>
+          </div>
+  );
+};
+
+export default ItemCount;
 
 
 
-export default ItemCount
