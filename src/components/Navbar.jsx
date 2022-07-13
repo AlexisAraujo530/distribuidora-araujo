@@ -38,7 +38,9 @@ const Navbar = () => {
                 ))}
             </ul>
             </div>
+            <Link to= {"/cart"}>
             <CartWidget />
+            </Link>
         </nav>
     );
 };
