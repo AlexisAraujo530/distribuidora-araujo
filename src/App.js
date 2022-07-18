@@ -1,5 +1,5 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Navbar from './components//Navbar';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -14,9 +14,9 @@ function App() {
   
   return (
     <BrowserRouter>  
-    <Navbar />
+    
           <CartProvider>
-            
+          <Navbar />
             <Routes>
                 <Route path="/" element={<ItemListContainer />} />
                 <Route

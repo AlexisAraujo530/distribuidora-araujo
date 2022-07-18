@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import { getProds } from '../mocks/fakeApi'
 import { useParams } from 'react-router-dom';
+//import { db } from '../firebase/firebase';
+
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);

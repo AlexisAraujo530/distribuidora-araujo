@@ -31,11 +31,12 @@ const Navbar = () => {
             <h1>Distribuidora Malena</h1>
             <div className="categoria">
             <ul className='d-flex flex-row align-items-center display-6 justify-content-between'>
-                {categories.map((category) => (
+               <h2> {categories.map((category) => (
                     <Link className="categorias" to={category.path} key={category.id} >
                         {category.name}
                     </Link>
                 ))}
+                </h2>
             </ul>
             </div>
             <Link to= {"/cart"}>
