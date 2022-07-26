@@ -3,8 +3,8 @@ import { useState, createContext } from 'react';
 export const CartContext = createContext();
 
 
-const CartProvider = (props) => {
-    //console.log(props);
+const CartProvider = ({children}) => {
+    //console.log(children);
     const [cart, setCart] = useState([]);
 
     const addToCart = (item, cantidad) => {
@@ -45,7 +45,7 @@ const CartProvider = (props) => {
         <CartContext.Provider
             value={{ cart, addToCart, deleteItem, calcularTotal }}
         >
-            {props.children}
+            {children}
         </CartContext.Provider>
     );
 };

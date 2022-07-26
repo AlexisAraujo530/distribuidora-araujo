@@ -1,0 +1,110 @@
+{
+    "Leche": {
+        
+        "name":"Aceite",
+        "category":"Lacteos",
+        "description":"Leche Sach x1L",
+        "image":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/013-003-008_leche-sachet-cotar-entera-x-1-litro1-09be66ccd63778636415885191543001-640-0.jpg",
+        "stock" : 25,
+        "price": 140
+        },
+    "CocaCola": {
+        "id":2,
+        "name":"CocaCola",
+        "category":"Bebidas",
+        "description":"Cocacola x1.5L descartable",
+        "image":"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080015_f.jpg",
+        "stock" : 215,
+        "price": 240
+            },
+    "Brahama": {
+        "id":3,
+        "name":"Brahama",
+        "category":"Bebidas",
+        "description":"Cerveza Brahma x1L",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNfCk9yS_DXttu8UlrUG9-EtehBASbiC7n2tFmwbdkmi_LuoQypBm3E4xjbCDCiESsSaE&usqp=CAU",
+        "stock" : 55,
+        "price": 190
+                },
+    "Crema": {
+        "id":4,
+        "name":"Crema",
+        "category":"Lacteos",
+        "description":"Crema x 200gr cotar",
+        "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/193/620/products/93171-6bed67c1477fe87bb616074554356861-1024-1024.jpg",
+        "stock" : 55,
+        "price": 190
+                },
+    "Manteca": {
+        "id":5,
+        "name":"Manteca",
+        "category":"Lacteos",
+        "description":"Manteca x 200gr LaPaulina",
+        "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/013-004-008_manteca-x-200-grs-la-paulina1-1ba3b7c6fab5b6f9f515885192924996-480-0.jpg",
+        "stock" : 55,
+        "price": 230
+                },
+    "Bebible": {
+        "id":6,
+        "name":"Bebible",
+        "category":"Lacteos",
+        "description":"Bebible x 1L cotar",
+        "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/013-007-002_yogur-cotar-entero-bebible-sachet-frutilla-x-1-litro1-c0be2691022a3568a615885198989692-480-0.jpg",
+        "stock" : 55,
+        "price": 190
+                }, 
+    "Pritty": {
+        "id":7,
+        "name":"Pritty",
+        "category":"Bebidas",
+        "description":"PACK X6 Pritty x3L",
+        "image":"https://hiperlibertad.vteximg.com.br/arquivos/ids/162522-1000-1000/PRITTY-LIMON-3L-1-5063.jpg?v=637287217795330000",
+        "stock" : 55,
+        "price": 1230
+                },  
+    "DobleCola": {
+        "id":8,
+        "name":"DobleCola",
+        "category":"Bebidas",
+        "description":"Pack x6 DobleCola x3L",
+        "image":"https://hiperlibertad.vteximg.com.br/arquivos/ids/164380-1000-1000/Gaseosa-Doble-Cola-3-lt-1-8560.jpg?v=637293037179700000",
+        "stock" : 35,
+        "price": 1150
+                 }, 
+    "Arroz": {
+        "id":9,
+        "name":"Arroz Trimacer",
+        "category":"Almacen",
+        "description":"Arroz Trimacer x1Kg",
+        "image":"http://d2r9epyceweg5n.cloudfront.net/stores/001/392/250/products/fotos-fondo-blanco-pagina-101-09aeed3c5e3431ab8216294046363436-640-0.png",
+        "stock" : 55,
+        "price": 190
+                }, 
+    "Fideo": {
+        "id":10,
+        "name":"Fideo Knorr",
+        "category":"Almacen",
+        "description":"Fideo Knorr x500gr",
+        "image": "https://www.knorr.com/content/dam/unilever/knorr_world/argentina/pack_shot/mostachol_fop-58683780-png.png.ulenscale.315x315.png",
+        "stock" : 63,
+        "price": 140
+                 }, 
+    "Grasa": {
+        "id":11,
+        "name":"Grasa Sugarosa",
+        "category":"Almacen",
+        "description":"Grasa Sugarosa x500gr",
+        "image":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/193/620/products/12061-9f744f90112976e4cf16074545343011-640-0.jpg",
+        "stock" : 25,
+        "price": 210
+                },
+    "Aceite": {
+        "id":12,
+        "name":"Aceite Cañuelas x1L",
+        "category":"Almacen",
+        "description":"Aceite Cañuelas x1L",
+        "image":"https://jumboargentina.vtexassets.com/arquivos/ids/210381-800-600?v=636383739908430000&width=800&height=600&aspect=true",
+        "stock" : 72,
+        "price": 340
+                }            
+}

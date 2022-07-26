@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from "../CartContext";
 
-const Item = ({ item }) => {
+const Item = ({ product }) => {
     const { cart } = useContext(CartContext);
 
-    const isInCart = cart.some((prod) => prod.id === item.id);
+    const isInCart = cart.some((prod) => prod.id === product.id);
     return (
         <div className="item">
-            <img src={item.image} alt="producto" />
+            <img src={product.image} alt="producto" />
             <section>
-                <h2>{item.title}</h2>
-                <p>${item.price}</p>
-                <Link className="detalle" to={`/detail/${item.id}`}>
+                <h2>{product.name}</h2>
+                <p>${product.price}</p>
+                <Link className="detalle" to={`/detail/${product.id}`}>
                     Ver detalle
                 </Link>
             </section>

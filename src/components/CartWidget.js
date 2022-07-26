@@ -11,7 +11,7 @@ const CartWidget = () => {
 
     return (
     <>
-        <ShoppingCartTwoToneIcon HomeIcon color="success"  sx={{ fontSize: 80 }}/>
+        <ShoppingCartTwoToneIcon  color="success"  sx={{ fontSize: 80 }}/>
     
     </>
     )
