@@ -2,6 +2,26 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+ 
+
+  
+}
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+
+ 
 }
 
 nav {
@@ -12,24 +32,54 @@ nav {
   padding: 10px 15px;
 }
 
-nav h2 {
+nav h2 path {
   color: white;
   background-color: white;
   border-radius: 10px;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-nav ul {
+nav ul .categoriass {
   list-style: none;
   display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
   
 }
-
+h2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 nav ul li {
-  color: white;
+  color: rgb(255, 122, 122);
   margin: 0px 10px;
 }
-
+button.btn.btn-primary {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0px 10px;
+}
+button.botonGogle.btn.btn-primary{
+  background: rgb(159, 160, 255);
+  color: black;
+}
+.categoria{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  width: 40%;
+}
 .shop {
   display: flex;
   align-items: center;
@@ -85,26 +135,48 @@ nav ul li {
   color: black;
 }
 .borrar{
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
   border-radius: 20px;
  
+}
+.confirmarpedido{
+  width: 250px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 25px;
+ 
+}
+.Carrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  margin-top: 20px;
+  
 }
 
 .detail {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border: 2px solid red;
-  
+  padding: 10px;  
 }
 .detail img{
   width: 250px;
   height: 250px;
   
-
 }
-
+div .detail{
+  display: flex;
+  margin-left: 20%;
+  margin-top: 20px;
+  width: 60%;
+  border: 10px solid rgb(148, 141, 141);
+  padding: 50px;  
+  border-radius: 50px;
+}
 .asd{
   height: 500px;
 
@@ -125,10 +197,16 @@ nav ul li {
 }
 
 .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   box-shadow: 2px 2px 5px 3px rgba(173, 173, 173, 0.491);
-  margin: 10px;
-  border-radius: 5px;
+  margin: 15px;
+  border-radius: 10px;
   border: none;
+  width: 400px;
+  height: 450px;
 }
 
 .item section {
@@ -137,15 +215,22 @@ nav ul li {
 }
 
 .item section p {
-  margin: 10px 0px 15px 0px;
+  
   color: rgb(254, 68, 99);
   font-size: 25px;
 }
 
+.agregado{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
 .item img {
   object-fit: cover;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .detalle {
@@ -157,137 +242,3 @@ nav ul li {
   margin: 10px 0px;
   text-decoration: none;
 }
-
-/*
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
-nav {
-  background-color: rgb(65, 190, 240);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-}
-
-nav h1 {
-  color: black;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  color: white;
-  margin: 0px 10px;
-}
-
-.shop {
-  display: flex;
-  align-items: center;
-}
-
-.shop p {
-  color: white;
-  margin-left: 12px;
-}
-
-.count {
-  background-color: rgba(25, 216, 41, 0.767);
-  margin: 30px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons button {
-  font-size: 25px;
-  border: none;
-  background-color:white;
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: black;
-  
-}
-
-.buttons p {
-  width: 100%;
-  text-align: center;
-  font-size: 26px;
-  color: white;
-}
-
-.add-cart button {
-  width: 100%;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color:white;
-  color: black;
-  padding: 10px 0px;
-  cursor: pointer;
-}
-
-.detail {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  border: 2px solid black;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-.categorias{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 20px;
-  background: rgb(31, 230, 64);
-  color: black;
-}
-
-.verdetalle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 20px;
-  background: rgb(50, 177, 216);
-  color: black;
-}
-.categoria{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 20px;
-  background: white;
-  color: black;
-}
-/*nav ul .categorias{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 50px;
-}
-*/

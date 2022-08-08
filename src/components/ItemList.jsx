@@ -1,19 +1,11 @@
 import React from "react";
 import Item from "./Item";
 
-const styles = {
-  container:{
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexWrap: "wrap",
-  }
-}
+
 
 const ItemList = ({ products }) => {
   return (
-    <div style={styles.container}>
+    <div className="flex-container"  >
       {products.map((product) => (
         <Item key={product.id} product={product} />
       ))}
@@ -21,4 +13,7 @@ const ItemList = ({ products }) => {
   );
 };
 
-export default ItemList
+export default ItemList;
+
+
+

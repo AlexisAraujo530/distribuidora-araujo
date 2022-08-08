@@ -3,7 +3,10 @@ import { useContext } from 'react';
 import { CartContext } from "../CartContext";
 import { Link } from 'react-router-dom';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-//import { db } from '../firebase/firebase';
+import swal from 'sweetalert';
+
+
+
 
 const Cart = () => {
     const { cart, deleteItem, calcularTotal } = useContext(CartContext);
@@ -11,18 +14,23 @@ const Cart = () => {
      //console.log(total);
      //console.log(cart);
     const pedido = {
-        cliente: {
+        cliente: { 
             nombre: 'Juan',
             apellido: 'Perez',
             direccion: 'Calle falsa 123',
             telefono: '123456789',
             email: 'juan@gmail.com'
+            
         },
         productos: cart.map(product => ({ id:product.id, nombre:product.name, precio:product.price })),
         total: calcularTotal(),
     }
     const confirmarPedido =() => {
-        alert("Su pedido se ha realizado con éxito");
+      swal({
+        title:'Pedido confirmado!',
+        text: 'Gracias por su compra!',
+        icon:"success"});
+        
    
       const db = getFirestore();
       const pedidosRealizados = collection( db,'pedidos');
@@ -42,17 +50,24 @@ const Cart = () => {
       }
     
     return (
-      <div>
+      
+      
+      <div className='Carrito'>
+      <h2>Productos en el carrito:</h2>
       <div>
           {cart.map((prod) => (
               <div
                   key={prod.id}
                   style={{
-                      display: 'flex',
-                      border: '2px solid black',
-                      margin: '10px',
-                      padding: '10px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    border: '2px solid black',
+                    borderRadius: '5px',
+                    margin: '20px',
+                    padding: '10px',
                   }}
+                  
               >
                   <div>
                       <img src={prod.image} width="70px" height="80px" alt="product" />
@@ -60,15 +75,15 @@ const Cart = () => {
                   <h2>Producto: {prod.name}</h2>
                   <h2>$ {prod.price}</h2>
                   <h2>Cantidad: {prod.cantidad}</h2>
-                  <button className='borrar btn-danger' onClick={() => deleteItem(prod.id)}>
-                      Borrar
-                  </button>
+                  <button className='borrar btn-danger' onClick={() => deleteItem(prod.id)}>Borrar Producto</button>
               </div>
           ))}
           <h3>Total: $ {calcularTotal()} </h3>
-      </div>
-      <button onClick={confirmarPedido}> Confirmar Pedido!</button>
+      </div> 
+      <button className='confirmarpedido btn-success' onClick={confirmarPedido}>Confirmar Pedido!</button>
+      
   </div>
+  
     );
 }
 export default Cart;

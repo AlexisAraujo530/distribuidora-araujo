@@ -16,35 +16,9 @@ const Item = ({ product }) => {
                     Ver detalle
                 </Link>
             </section>
-            {isInCart && <h2>Ya está en el carrito</h2>}
+            {isInCart && <h2 className='agregado'>Ya está en el carrito</h2>}
         </div>
     );
 };
 
 export default Item;
-/*import React  from 'react';
-import { Link } from 'react-router-dom';
-
-
-
-const Item = ({ item }) => {
-    
-
-    return (
-        <div
-            style={{
-                margin: '10px 20px',
-                border: '2px solid black',
-                width: '40%',
-            }}
-        >
-            <img width="200px" src={item.image} alt="producto" />
-            <h2>{item.name}</h2>
-            <p>${item.price}</p>
-            <Link className='verdetalle' to={`/detail/${item.id}`}>Ver detalle</Link>
-        </div>
-    );
-};
-
-export default Item;
-*/

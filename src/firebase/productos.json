@@ -1,7 +1,7 @@
 {
     "Leche": {
         
-        "name":"Aceite",
+        "name":"Leche",
         "category":"Lacteos",
         "description":"Leche Sach x1L",
         "image":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/013-003-008_leche-sachet-cotar-entera-x-1-litro1-09be66ccd63778636415885191543001-640-0.jpg",
@@ -29,7 +29,7 @@
     "Crema": {
         "id":4,
         "name":"Crema",
-        "category":"Lacteos",
+        "category":"lacteos",
         "description":"Crema x 200gr cotar",
         "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/193/620/products/93171-6bed67c1477fe87bb616074554356861-1024-1024.jpg",
         "stock" : 55,

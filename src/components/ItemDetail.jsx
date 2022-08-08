@@ -9,15 +9,16 @@ const ItemDetail = ({ product }) => {
     const { addToCart } = useContext(CartContext);
     //const valor = useContext(CartContext)
     //valor.addToCart
-
+ 
+   
     const onAdd = (cant) => {
         setCantidad(cant);
         addToCart(product, cant);
     };
     return (
-      <div className='itemdetail'>
+      <div className='itemdetail' >
         <div className="detail">
-            <img src={product.image} alt={product.title} width="400" />
+            <img src={product.image} alt={product.title} />
             <div>
                 <h1>{product.name}</h1>
                 <h2>{product.description}</h2>
@@ -30,7 +31,7 @@ const ItemDetail = ({ product }) => {
                         onAdd={onAdd}
                     />
                 ) : (
-                    <button>
+                    <button className='confirmarpedido btn-success'>
                     <Link to="/cart">Ir al carrito</Link>
                     </button>
                 )}

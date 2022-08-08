@@ -24,7 +24,9 @@ export const ItemDetailContainer = () => {
     //console.log(product)
     return (
         <>
-            {loaded ? <CircularProgress color="success" /> : <ItemDetail product={product} />}
+            {loaded 
+            ? <CircularProgress color="success" /> 
+            : <ItemDetail product={product} />}
         </>
     )
 }

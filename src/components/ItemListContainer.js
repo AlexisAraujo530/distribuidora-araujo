@@ -39,7 +39,7 @@ export const ItemListContainer = () => {
               <>
                   {loading 
                   
-                  ? <CircularProgress color="success" />
+                  ? <CircularProgress color="success"/>
                   : <ItemList products={products} />    
                   }
               </>
